@@ -14,6 +14,18 @@ function App() {
     setCount(prev => prev - 1);
   }
 
+  const incrementNoCallback = () => {
+    for(let i = 0; i < 100; i++) {
+      setCount(count + 1);
+    }
+  }
+
+  const incrementCallback = () => {
+    for(let i = 0; i < 100; i++) {
+      setCount(prev => prev + 1);
+    }
+  }
+
   return (
     <>
       <div>
@@ -33,6 +45,12 @@ function App() {
           </button>
           <button onClick={decrement}>
             - Decrement
+          </button>
+          <button onClick={incrementNoCallback}>
+            - Increment 100 times (No Callback)
+          </button>
+          <button onClick={incrementCallback}>
+            - Increment 100 times (Callback)
           </button>
         </div>
         <p>
