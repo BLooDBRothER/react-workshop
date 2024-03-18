@@ -29,10 +29,10 @@ function App() {
       <div className="card">
         <div className='btn-wrapper'>
           <button onClick={increment}>
-            + increment
+            + Increment
           </button>
           <button onClick={decrement}>
-            - decrement
+            - Decrement
           </button>
         </div>
         <p>
