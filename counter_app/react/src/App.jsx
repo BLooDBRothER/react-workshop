@@ -1,67 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [count, setCount] = useState(0);
 
-  const increment = () => {
-    setCount(prev => prev + 1);
-  }
+    const increment = () => {
+        setCount((prev) => prev + 1);
+    };
 
-  const decrement = () => {
-    setCount(prev => prev - 1);
-  }
+    const decrement = () => {
+        setCount((prev) => prev - 1);
+    };
 
-  const incrementNoCallback = () => {
-    for(let i = 0; i < 100; i++) {
-      setCount(count + 1);
-    }
-  }
-
-  const incrementCallback = () => {
-    for(let i = 0; i < 100; i++) {
-      setCount(prev => prev + 1);
-    }
-  }
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <h2>count is {count}</h2>
-      <div className="card">
-        <div className='btn-wrapper'>
-          <button onClick={increment}>
-            + Increment
-          </button>
-          <button onClick={decrement}>
-            - Decrement
-          </button>
-          <button onClick={incrementNoCallback}>
-            - Increment 100 times (No Callback)
-          </button>
-          <button onClick={incrementCallback}>
-            - Increment 100 times (Callback)
-          </button>
-        </div>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        <>
+            <div>
+                <a href="https://vitejs.dev" target="_blank">
+                    <img src={viteLogo} className="logo" alt="Vite logo" />
+                </a>
+                <a href="https://react.dev" target="_blank">
+                    <img
+                        src={reactLogo}
+                        className="logo react"
+                        alt="React logo"
+                    />
+                </a>
+            </div>
+            <h1>Vite + React</h1>
+            <h2>count is {count}</h2>
+            <div className="card">
+                <div className="btn-wrapper">
+                    <button onClick={increment}>+ Increment</button>
+                    <button onClick={decrement}>- Decrement</button>
+                </div>
+                <p>
+                    Edit <code>src/App.jsx</code> and save to test HMR
+                </p>
+            </div>
+            <p className="read-the-docs">
+                Click on the Vite and React logos to learn more
+            </p>
+        </>
+    );
 }
 
-export default App
+export default App;
