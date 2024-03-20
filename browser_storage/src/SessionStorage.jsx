@@ -12,9 +12,9 @@ const Sessionstorage = ({ inputValue }) => {
         value && setSessionstorageValue(value);
     }
 
-    // useEffect(() => {
-    //     getLocalstorageValue();
-    // }, [])
+    useEffect(() => {
+        getSessionstorageValue();
+    }, [])
 
     return (
         <div>

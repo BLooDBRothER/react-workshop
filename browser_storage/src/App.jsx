@@ -1,26 +1,33 @@
-import { useState } from 'react'
-import './App.css'
-import Sessionstorage from './SessionStorage';
-import Localstoarage from './Localstorage';
+import { useState } from "react";
+import "./App.css";
+import Sessionstorage from "./SessionStorage";
+import Localstoarage from "./LocalStorage";
 
 function App() {
-  const [input, setInput] = useState("");
+    const [input, setInput] = useState("");
 
-  return (
-    <div>
-        <h1>Browser Storages</h1>
+    const handleOnChange = (e) => {
+        setInput(e.target.value);
+    };
 
+    return (
         <div>
-          <label>Input text </label>
-          <input value={input} onChange={(e) => {setInput(e.target.value)}} />
-          <hr />
+            <h1>Browser Storages</h1>
+            <div>
+                <label>Input text </label>
+                <input
+                    autoFocus
+                    value={input}
+                    onChange={handleOnChange}
+                />
+                <hr />
 
-          <Localstoarage inputValue={input} />
-          <hr />
-          <Sessionstorage inputValue={input} />
+                <Localstoarage inputValue={input} />
+                <hr />
+                <Sessionstorage inputValue={input} />
+            </div>
         </div>
-    </div>
-  )
+    );
 }
 
-export default App
+export default App;

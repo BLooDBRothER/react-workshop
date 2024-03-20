@@ -12,9 +12,9 @@ const Localstoarage = ({ inputValue }) => {
         value && setLocalstorageValue(value);
     }
 
-    // useEffect(() => {
-    //     getLocalstorageValue();
-    // }, [])
+    useEffect(() => {
+        getLocalstorageValue();
+    }, [])
 
     return (
         <div>
